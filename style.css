@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  margin: 0;
+}
+
+.calculator {
+  width: 320px;
+  background: #222;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+.calculator:hover {
+  transform: scale(1.03);
+}
+
+.display {
+  background: #111;
+  color: #0f0;
+  font-size: 2em;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #555;
+}
+
+button:active {
+  transform: scale(0.9);
+  background: #777;
+}
+
+.operator {
+  background: #ff9500;
+}
+
+.operator:hover {
+  background: #ffb84d;
+}
+
+.equal {
+  grid-column: span 2;
+  background: #28a745;
+}
+
+.equal:hover {
+  background: #45d169;
+}
+
+.clear {
+  background: #dc3545;
+}
+
+.clear:hover {
+  background: #ff5c6c;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+footer span {
+  color: #00ff88;
+  font-weight: bold;
+}
+
