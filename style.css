@@ -1,87 +1,89 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  background: radial-gradient(circle at top left, #74ebd5, #ACB6E5);
   margin: 0;
 }
 
 .calculator {
-  width: 320px;
-  background: #222;
+  width: 340px;
+  background: #1e1e1e;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
 }
 
 .calculator:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .display {
   background: #111;
-  color: #0f0;
-  font-size: 2em;
+  color: #00ff88;
+  font-size: 2.2em;
   text-align: right;
-  padding: 20px;
+  padding: 25px 20px;
   box-sizing: border-box;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #333;
+  text-shadow: 0 0 5px #00ff88;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: #222;
 }
 
 button {
-  padding: 20px;
+  padding: 22px;
   font-size: 1.2em;
   border: none;
   outline: none;
   cursor: pointer;
-  background: #333;
+  background: #2e2e2e;
   color: white;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
 }
 
 button:hover {
-  background: #555;
+  background: #444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 button:active {
-  transform: scale(0.9);
-  background: #777;
+  transform: scale(0.95);
+  background: #555;
 }
 
 .operator {
-  background: #ff9500;
-}
-
-.operator:hover {
-  background: #ffb84d;
+  background: linear-gradient(145deg, #ff9500, #ffae42);
+  color: #fff;
+  font-weight: bold;
 }
 
 .equal {
   grid-column: span 2;
-  background: #28a745;
-}
-
-.equal:hover {
-  background: #45d169;
+  background: linear-gradient(145deg, #28a745, #34d058);
+  color: #fff;
+  font-weight: bold;
 }
 
 .clear {
-  background: #dc3545;
+  background: linear-gradient(145deg, #dc3545, #ff5c6c);
+  color: #fff;
+  font-weight: bold;
 }
 
-.clear:hover {
-  background: #ff5c6c;
+.footer {
+  margin-top: 15px;
+  color: #333;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0.7;
 }
-
-
-
-
