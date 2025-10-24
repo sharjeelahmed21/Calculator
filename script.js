@@ -1,13 +1,6 @@
 const display = document.getElementById("display");
 
-function playSound() {
-  const audio = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
-  audio.volume = 0.2;
-  audio.play();
-}
-
 function append(value) {
-  playSound();
   if (display.innerText === "0" || display.innerText === "Error") {
     display.innerText = value;
   } else {
@@ -16,12 +9,10 @@ function append(value) {
 }
 
 function clearDisplay() {
-  playSound();
   display.innerText = "0";
 }
 
 function calculate() {
-  playSound();
   try {
     let result = eval(display.innerText.replace("÷", "/").replace("×", "*"));
     if (result === Infinity || isNaN(result)) throw "Error";
@@ -41,7 +32,6 @@ document.addEventListener("keydown", (event) => {
     event.preventDefault();
     calculate();
   } else if (key === "Backspace") {
-    playSound();
     display.innerText = display.innerText.slice(0, -1) || "0";
   } else if (key === "Escape" || key.toLowerCase() === "c") {
     clearDisplay();
