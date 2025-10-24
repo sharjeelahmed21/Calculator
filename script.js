@@ -22,7 +22,7 @@ function calculate() {
   }
 }
 
-// ✅ Keyboard Support
+
 document.addEventListener("keydown", (event) => {
   const key = event.key;
 
@@ -37,3 +37,4 @@ document.addEventListener("keydown", (event) => {
     clearDisplay();
   }
 });
+
